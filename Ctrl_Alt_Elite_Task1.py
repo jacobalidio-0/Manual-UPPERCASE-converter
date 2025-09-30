@@ -1,3 +1,5 @@
+import streamlit
+
 # Define a function that converts a string to uppercase manually
 def to_upper_manual(s):
     # Initialize an empty string to store the result
@@ -17,4 +19,5 @@ def to_upper_manual(s):
     return result
 
 # Call the function with a sample string and print the result
+
 print(to_upper_manual("ctrl alt elite")) # Output: CTRL ALT ELITE
