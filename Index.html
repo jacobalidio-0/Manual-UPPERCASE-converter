@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual Uppercase Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manual Uppercase Converter</h1>
+  <label for="inputText">Enter your text:</label><br>
+  <input type="text" id="inputText" placeholder="Type something..."><br>
+  <button onclick="convertToUpper()">Convert</button>
+
+  <div id="output"></div>
+
+  <script>
+    function toUpperManual(s) {
+      let result = "";
+      for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (char >= 'a' && char <= 'z') {
+          result += String.fromCharCode(char.charCodeAt(0) - 32);
+        } else {
+          result += char;
+        }
+      }
+      return result;
+    }
+
+    function convertToUpper() {
+      const input = document.getElementById("inputText").value;
+      const output = toUpperManual(input);
+      document.getElementById("output").innerText = "Uppercase: " + output;
+    }
+  </script>
+</body>
+</html>
